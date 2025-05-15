@@ -1,0 +1,13 @@
+AI Engineering Roadmap
+
+1. Python --> (DONE)
+2. Math (Linear Algebra, Statistics, and Calculus) --> (DONE)
+3. Data Analysis
+4. Data Science
+5. Artificial Intelligence
+6. Machine Learning
+----------------------------------------------------------------
+7. Deep Learning
+8. NLP
+9. Computer Vision
+10. Generative AI/
