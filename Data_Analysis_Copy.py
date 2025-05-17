@@ -6056,11 +6056,11 @@
 
 # ------------------------------------------------------------------------------
 
-import pandas as pd
+# import pandas as pd
 
-df = pd.read_csv("student_habits_performance.csv")
-df.dropna(inplace=True)
+# df = pd.read_csv("student_habits_performance.csv")
+# df.dropna(inplace=True)
 
-onehot = pd.get_dummies(data=df, columns=["gender"], prefix="Gend", dtype=int)
-print(onehot.head())
-print(onehot.shape)
+# onehot = pd.get_dummies(data=df, columns=["gender"], prefix="Gend", dtype=int)
+# print(onehot.head())
+# print(onehot.shape)

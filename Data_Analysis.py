@@ -5846,7 +5846,9 @@
 # import pandas as pd
 # import matplotlib.pyplot as plt
 # import seaborn as sns
+# import numpy as np
 
+# pd.Series()
 # df = pd.read_csv("student_habits_performance.csv")
 
 # df.dropna(inplace=True)
@@ -5855,7 +5857,7 @@
 # print(df["exam_score"].describe())
 
 
-# ( This is a method we use to cut the columns into classes ot lables )
+# # ( This is a method we use to cut the columns into classes ot lables )
 # twenty_fifth = df["exam_score"].quantile(0.25)
 # seventy_fifth = df["exam_score"].quantile(0.75)
 # maximum = df["exam_score"].max()
@@ -6056,11 +6058,20 @@
 
 # ------------------------------------------------------------------------------
 
-import pandas as pd
+# import pandas as pd
 
-df = pd.read_csv("student_habits_performance.csv")
-df.dropna(inplace=True)
+# df = pd.read_csv("student_habits_performance.csv")
+# df.dropna(inplace=True)
 
-onehot = pd.get_dummies(data=df, columns=["gender"], prefix="Gend", dtype=int)
-print(onehot.head())
-print(onehot.shape)
+# onehot = pd.get_dummies(data=df, columns=["gender"], prefix="Gend", dtype=int)
+# print(onehot.head())
+# print(onehot.shape)
+
+# word = "abc"
+# # print(word[-2 : ])
+# x = word.replace(word[-2:], "")
+# print(x)
+
+import numpy as np
+
+print([["False", 1], [True, 10], [0, "4", ]])
