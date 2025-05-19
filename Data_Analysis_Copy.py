@@ -6064,3 +6064,5 @@
 # onehot = pd.get_dummies(data=df, columns=["gender"], prefix="Gend", dtype=int)
 # print(onehot.head())
 # print(onehot.shape)
+
+

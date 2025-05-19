@@ -6067,11 +6067,12 @@
 # print(onehot.head())
 # print(onehot.shape)
 
-# word = "abc"
-# # print(word[-2 : ])
-# x = word.replace(word[-2:], "")
-# print(x)
+# ------------------------------------------------------------------------------
 
-import numpy as np
+import pandas as pd
 
-print([["False", 1], [True, 10], [0, "4", ]])
+df1 = pd.DataFrame({'key': ['A', 'B', 'C'], 'value1': [1, 2, 3]})
+df2 = pd.DataFrame({'key': ['A', 'B', 'D'], 'value2': [4, 5, 6]})
+result = pd.merge(df1, df2, on='key', how="outer")
+print(result)
+
