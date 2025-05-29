@@ -1053,13 +1053,13 @@
 
 # ----------------------------------------------------------------------------------------
 
-word = "hello world"
-word = input("Enter the word: ")
+# word = "hello world"
+# word = input("Enter the word: ")
 
-lst = []
-for i in word:
-    if (f"{i} : {word.count(i)}") not in lst:
-        lst.append(f"{i} : {word.count(i)}")
+# lst = []
+# for i in word:
+#     if (f"{i} : {word.count(i)}") not in lst:
+#         lst.append(f"{i} : {word.count(i)}")
 
-for i in lst:
-    print(i)
+# for i in lst:
+#     print(i)

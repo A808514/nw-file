@@ -6069,9 +6069,69 @@
 
 # ------------------------------------------------------------------------------
 
+# import pandas as pd
+# from scipy.stats import uniform
+# from scipy.stats import binom
+# from scipy.stats import iqr
+# import numpy as np
+
+# print(uniform.rvs(0, 5, size=10))
+# print(uniform.cdf(9, 4, 10))
+
+# print(binom.rvs(5, 0.5, size=10))
+# print(binom.pmf(7, 10, 0.5))
+# print(binom.cdf(7, 10, 0.5))
+
+# df = pd.read_csv("student_habits_performance.csv")
+# print(df["age"].quantile(np.linspace(0, 1, 5)))
+# iqr = iqr(df["age"])
+# lower = df["age"].quantile(0.25) - 1.5 * iqr
+# upper = df["age"].quantile(0.75) + 1.5 * iqr
+# print(lower)
+# print(upper)
+
+# ------------------------------------------------------------------------------
+
+# ( Introduction to Importing Data in Python )
+
+import numpy as np
 import pandas as pd
 
-df1 = pd.DataFrame({'key': ['A', 'B', 'C'], 'value1': [1, 2, 3]})
-df2 = pd.DataFrame({'key': ['A', 'B', 'D'], 'value2': [4, 5, 6]})
-result = pd.merge(df1, df2, on='key', how="outer")
-print(result)
+# data = np.loadtxt("file.txt", skiprows=1, usecols=[1, 4])
+# data = np.loadtxt("file.txt", dtype=str)
+# print(data)
+
+# ( Pickle file )
+# import pickle
+# df = pd.read_csv("data1.csv")
+# df_array = df.to_pickle("main.pkl")
+# print(df_array)
+
+# with open("main.pkl", "rb") as file:
+#     df = pickle.load(file)
+# print(df)
+
+# ( Excel File )
+# excel = pd.read_excel("Book 1.xlsx")
+# excel = pd.ExcelFile("Book 1.xlsx")
+# print(excel.sheet_names)
+
+# ( SAS File )
+# from sas7bdat import SAS7BDAT
+# with SAS7BDAT("main.sas7bdat") as file:
+#     df_sas = file.to_data_frame()
+# print(df_sas)
+
+# ( HDF5 file )
+# import h5py
+# with h5py.File("main.hdf5", "r") as file:
+#     data = file["my_dataset"][:]
+# print(data)
+
+# ( Matlap file )
+# import scipy.io
+# filename = "main.mat"
+# mat = scipy.io.loadmat(filename)
+# print(mat)
+
+

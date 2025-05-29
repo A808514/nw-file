@@ -1,0 +1,15 @@
+% Creating a sample MATLAB file with a matrix and a struct
+% Define a sample matrix
+data_matrix = magic(5); % 5x5 magic square
+
+% Define a sample struct
+data_struct = struct();
+data_struct.name = 'SampleData';
+data_struct.values = [1, 2, 3, 4, 5];
+data_struct.timestamp = datetime('now');
+
+% Save the data to a .mat file in v7 format for compatibility
+save('sample_data.mat', 'data_matrix', 'data_struct', '-v7');
+
+% Display confirmation
+disp('Sample .mat file created: sample_data.mat');

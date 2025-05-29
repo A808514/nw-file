@@ -1,0 +1,18 @@
+proc import datafile="data2.csv"
+            out=random_data
+            dbms=csv
+            replace;
+    getnames=yes;
+    datarow=2;
+run;
+
+/* Apply formats to the dataset */
+proc datasets lib=work nolist;
+    modify random_data;
+    format Salary dollar10.2 JoinDate date9.;
+run;
+
+/* Print the dataset to verify */
+proc print data=random_data;
+    title "Imported Random Data";
+run;

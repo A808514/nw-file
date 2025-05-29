@@ -5846,7 +5846,9 @@
 # import pandas as pd
 # import matplotlib.pyplot as plt
 # import seaborn as sns
+# import numpy as np
 
+# pd.Series()
 # df = pd.read_csv("student_habits_performance.csv")
 
 # df.dropna(inplace=True)
@@ -5855,7 +5857,7 @@
 # print(df["exam_score"].describe())
 
 
-# ( This is a method we use to cut the columns into classes ot lables )
+# # ( This is a method we use to cut the columns into classes ot lables )
 # twenty_fifth = df["exam_score"].quantile(0.25)
 # seventy_fifth = df["exam_score"].quantile(0.75)
 # maximum = df["exam_score"].max()
@@ -6065,4 +6067,58 @@
 # print(onehot.head())
 # print(onehot.shape)
 
+# ------------------------------------------------------------------------------
 
+# import pandas as pd
+# from scipy.stats import uniform
+# from scipy.stats import binom
+# from scipy.stats import iqr
+# import numpy as np
+
+# print(uniform.rvs(0, 5, size=10))
+# print(uniform.cdf(9, 4, 10))
+
+# print(binom.rvs(5, 0.5, size=10))
+# print(binom.pmf(7, 10, 0.5))
+# print(binom.cdf(7, 10, 0.5))
+
+# df = pd.read_csv("student_habits_performance.csv")
+# print(df["age"].quantile(np.linspace(0, 1, 5)))
+# iqr = iqr(df["age"])
+# lower = df["age"].quantile(0.25) - 1.5 * iqr
+# upper = df["age"].quantile(0.75) + 1.5 * iqr
+# print(lower)
+# print(upper)
+
+# ------------------------------------------------------------------------------
+
+# ( Introduction to Importing Data in Python )
+
+# import numpy as np
+# import pandas as pd
+
+# data = np.loadtxt("file.txt", skiprows=1, usecols=[1, 4])
+# data = np.loadtxt("file.txt", dtype=str)
+# print(data)
+
+# ( Pickle file )
+# import pickle
+# df = pd.read_csv("data1.csv")
+# df_array = df.to_pickle("main.pkl")
+# print(df_array)
+
+# with open("main.pkl", "rb") as file:
+#     df = pickle.load(file)
+# print(df)
+
+# ( Excel File )
+# excel = pd.read_excel("Book 1.xlsx")
+# excel = pd.ExcelFile("Book 1.xlsx")
+# print(excel.sheet_names)
+
+# ( SAS File )
+# from sas7bdat import SAS7BDAT
+# with SAS7BDAT("main.sas7bdat") as file:
+#     df_sas = file.to_data_frame()
+
+# ( HDF5 file )
