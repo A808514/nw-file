@@ -6094,6 +6094,7 @@
 
 # ( Introduction to Importing Data in Python )
 
+import mysql.connector
 import numpy as np
 import pandas as pd
 
@@ -6134,4 +6135,49 @@ import pandas as pd
 # mat = scipy.io.loadmat(filename)
 # print(mat)
 
+# ( Creating a database engine )
+# from sqlalchemy import create_engine, inspect
+# engine = create_engine('sqlite:///example.db')
+# inspector = inspect(engine)
+# table_names = inspector.get_table_names()
+# print(table_names)
 
+# ( MYSQL )
+# import mysql
+# data = mysql.connector.connect(
+#     host = "127.0.0.1",
+#     user = "root",
+#     password = "Abdallah149.",
+#     database = "ai"
+# )
+# cursor = data.cursor()
+# cursor.execute("SHOW DATABASES;")
+# databases = cursor.fetchall()
+# print(databases)
+# for db in databases:
+#     print(db[0])
+
+# cursor = data.cursor()
+# cursor.execute("SHOW TABLES;")
+# table = cursor.fetchall()
+# for db in table:
+    # print(db[0])
+
+# cursor.execute("SELECT * FROM newjoinee;")
+# employee = pd.DataFrame(cursor.fetchall())
+# print(employee)
+
+# ( Creating a database engine )
+# from sqlalchemy import create_engine
+# engine = create_engine("mysql+mysqlconnector://root:Abdallah149.@127.0.0.1/ai")
+# employee = pd.read_sql("SELECT * FROM employee;", engine)
+# employee = pd.read_sql_query("SELECT * FROM employee;", engine)
+# print(employee)
+
+# ( Creating a database engine )
+# from sqlalchemy import create_engine, text
+# engine = create_engine("mysql+mysqlconnector://root:Abdallah149.@127.0.0.1/ai")
+# con = engine.connect()
+# rs = con.execute(text("SELECT * FROM employee"))
+# df = pd.DataFrame(rs.fetchall(), columns=rs.keys())
+# print(df)
