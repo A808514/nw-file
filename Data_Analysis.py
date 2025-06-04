@@ -6094,9 +6094,9 @@
 
 # ( Introduction to Importing Data in Python )
 
-import mysql.connector
-import numpy as np
-import pandas as pd
+# import mysql.connector
+# import numpy as np
+# import pandas as pd
 
 # data = np.loadtxt("file.txt", skiprows=1, usecols=[1, 4])
 # data = np.loadtxt("file.txt", dtype=str)
@@ -6161,7 +6161,7 @@ import pandas as pd
 # cursor.execute("SHOW TABLES;")
 # table = cursor.fetchall()
 # for db in table:
-    # print(db[0])
+# print(db[0])
 
 # cursor.execute("SELECT * FROM newjoinee;")
 # employee = pd.DataFrame(cursor.fetchall())
@@ -6181,3 +6181,28 @@ import pandas as pd
 # rs = con.execute(text("SELECT * FROM employee"))
 # df = pd.DataFrame(rs.fetchall(), columns=rs.keys())
 # print(df)
+
+# ------------------------------------------------------------------------------
+
+import datetime as dt
+import pandas as pd
+
+df = pd.read_csv("divorce.csv")
+df2 = pd.read_csv("student_habits_performance.csv")
+
+df["marriage_date"] = pd.to_datetime(df["marriage_date"]).dt.date
+# print(df.info())
+
+# today_date = dt.date.today()
+# x = df.loc[df["marriage_date"] < today_date, "marriage_date"] = today_date
+# print(df["marriage_date"].head())
+
+# x1 = df.loc[df["income_man"] > 15000, "income_man"] = 30000
+# print(df.loc[df["income_man"] == 30000, "income_man"])
+
+# print(df2[df2["netflix_hours"].duplicated(keep=False)])
+# df2.drop_duplicates(inplace=True)
+# print(df2.shape)
+
+# print(df2[df2[["gender", "parental_education_level"]].duplicated()])
+print(df2[df2.duplicated(subset=["gender", "parental_education_level"])])
